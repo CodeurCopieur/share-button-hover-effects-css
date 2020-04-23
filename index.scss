@@ -1,0 +1,163 @@
+$color_0: #e5e5e5;
+$color_1: #fff;
+//instagram
+$color_2: #C71E7E;
+$color_3: #ff3019;
+//gitlab
+$color_4: #E24329;
+$color_5: #FC9226;
+//github
+$color_6: #24292E;
+//codepen
+$color_7: #1E1F26;
+
+
+
+body {
+  font-family:'circular std', sans-serif;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  a {
+    text-decoration: none;
+  }
+
+  .container {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: 3;
+    background-color: $color_0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .nav-list {
+      position: relative;
+      transition: all 480ms;
+      display: flex;
+      flex-direction: row;
+
+      
+
+      .nav-item {
+
+        min-width: 110px;
+        padding: 1rem 2rem;
+        cursor: pointer;
+        display: flex;
+        transition: all .2s ease-in-out;
+        background-color: $color_1;
+
+                
+        &:not(:first-child) {
+          margin-left: 10px;
+        }
+
+        &:hover {
+          transform: scale(1.1);
+
+          & .nav-link .fab {
+            transform: translateX(0px);
+          }
+
+          & .nav-link span {
+            opacity: 1;
+          }
+
+        }
+
+        
+
+        &:hover.ig {
+          background: linear-gradient(to right, $color_3 0%, $color_2 100%);
+          
+            a .fab, span {
+              color: $color_1;
+            }
+        }
+
+        &:hover.gl {
+          background: linear-gradient(to right, $color_4 0%, $color_5 100%);
+          
+            a .fab, span {
+              color: $color_1;
+            }
+        }
+
+        &:hover.gh {
+          background: linear-gradient(to right, $color_6 0%, $color_0 100%);
+          
+            a .fab, span {
+              color: $color_1;
+            }
+        }
+
+        &:hover.cp {
+          background: linear-gradient(to right, $color_0 0%, $color_7 100%);
+          
+            a .fab, span {
+              color: $color_1;
+            }
+        }
+
+
+        .nav-link {
+
+          display: flex;
+          //color: #FFF;
+          transition: all .2s ease-in-out;
+
+          i.fa-instagram, .ig  {
+            color: $color_2;
+          }
+
+          i.fa-gitlab, .gl {
+            color: $color_4;
+          }
+
+          i.fa-github, .gh {
+            color: $color_6;
+          }
+
+          i.fa-codepen, .cp {
+            color: $color_7;
+          }
+
+          .fab {
+            font-size: 20px;
+            transform: translateX(35px);
+            transition: all .2s ease-in-out;
+          }
+
+          span {
+            padding-left: 10px;
+            opacity: 0;
+            transition: all .2s ease-in-out;
+          }
+        }
+      }
+
+      @media screen and (max-width:768px){
+        flex-direction: column;
+
+        .nav-item {
+          margin: 10px 0px;
+
+          &:not(:first-child) {
+            margin-left: 0px;
+          }
+        }
+      }
+    }
+
+  }
+}
+
+
+html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}main{display:block}h1{font-size:2em;margin:.67em 0}hr{-webkit-box-sizing:content-box;box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent}abbr[title]{border-bottom:none;text-decoration:underline;-webkit-text-decoration:underline dotted;text-decoration:underline dotted}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{-webkit-box-sizing:border-box;box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{-webkit-box-sizing:border-box;box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details{display:block}summary{display:list-item}template{display:none}[hidden]{display:none}
+
+html,body,p,ol,ul,li,dl,dt,dd,blockquote,figure,fieldset,legend,textarea,pre,iframe,hr,h1,h2,h3,h4,h5,h6{margin:0;padding:0}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:400}ul{list-style:none}button,input,select,textarea{margin:0}html{-webkit-box-sizing:border-box;box-sizing:border-box}*,*::before,*::after{-webkit-box-sizing:inherit;box-sizing:inherit}img,video{height:auto;max-width:100%}iframe{border:0}table{border-collapse:collapse;border-spacing:0}td,th{padding:0}td:not([align]),th:not([align]){text-align:left}
